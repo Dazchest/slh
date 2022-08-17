@@ -84,7 +84,7 @@
             @endif --}}
 
             <div>
-                Shopping basket yada daba doo
+                Shopping basket yada daba 
                 <div id="basket">Basket info here</div>
             </div>
 
