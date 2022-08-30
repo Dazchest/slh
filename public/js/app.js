@@ -67999,7 +67999,8 @@ var doCalc = function doCalc(mine) {
   var secondsElapsed = ((Date.now() - mine.update_time) / 1000).toFixed(0);
   var usePerSecond = mine.level / (mine.hours * 60 * 60 + mine.minutes * 60 + Number(mine.seconds));
   mine.qty_left = (mine.qty - secondsElapsed * usePerSecond).toFixed(0);
-  mine.output = mine.buff ? ((mine.buff / 100 + 1) * mine.qty_left).toFixed(0) : mine.qty_left;
+  mine.output = 1; // mine.buff ? ((mine.buff / 100 + 1) * mine.qty_left).toFixed(0) : mine.qty_left;
+
   var seconds = mine.qty_left / usePerSecond;
   var daysLeft = Math.floor(seconds / (24 * 60 * 60));
   var hoursLeft = Math.floor(seconds / (60 * 60)) - daysLeft * 24;

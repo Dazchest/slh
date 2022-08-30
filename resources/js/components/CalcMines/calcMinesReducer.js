@@ -62,7 +62,7 @@ const doCalc = (mine) => {
     const secondsElapsed = ((Date.now() - mine.update_time) / 1000).toFixed(0);
     const usePerSecond = mine.level / (((mine.hours * 60 * 60) + (mine.minutes * 60) + Number(mine.seconds))) 
     mine.qty_left = (mine.qty - (secondsElapsed * usePerSecond)).toFixed(0);
-    mine.output = mine.buff ? ((mine.buff / 100 + 1) * mine.qty_left).toFixed(0) : mine.qty_left;
+    mine.output = 1;  // mine.buff ? ((mine.buff / 100 + 1) * mine.qty_left).toFixed(0) : mine.qty_left;
     const seconds = mine.qty_left / usePerSecond;
     const daysLeft =  Math.floor((seconds / (24*60*60)))
     const hoursLeft = Math.floor(seconds / (60*60)) - (daysLeft * 24);
